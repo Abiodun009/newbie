@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Designs Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .portfolio-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-teal-600 text-white p-6 sticky top-0 z-10 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold">Creative Designs</h1>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="#welcome" class="hover:underline">Welcome</a></li>
+                    <li><a href="#work" class="hover:underline">Work</a></li>
+                    <li><a href="#reach-out" class="hover:underline">Reach Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Welcome Section -->
+    <section id="welcome" class="py-24 bg-gradient-to-b from-teal-100 to-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-bold text-gray-800 mb-6">Crafting Artful Frames & Graphics</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">Transforming ideas into captivating frame designs and graphic masterpieces with a touch of creativity.</p>
+            <a href="https://wa.me//+2348147767226" class="inline-block bg-teal-600 text-white px-8 py-4 rounded-lg shadow-md hover:bg-teal-700">Contact Now</a>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-20 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Our Work</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Work Item 1 -->
+                <div class="portfolio-card bg-gray-100 rounded-xl shadow-lg overflow-hidden">
+                    <img src="WhatsApp Image 2025-06-16 at 3.23.46 AM.jpeg" alt="Ornate Frame" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800"> Oriki Frame</h3>
+                        <p class="text-gray-600 mt-2">Handcrafted frame with gold leaf embellishments.</p>
+                    </div>
+                </div>
+                <!-- Work Item 2 -->
+                <div class="portfolio-card bg-gray-100 rounded-xl shadow-lg overflow-hidden">
+                    <img src="WhatsApp Image 2025-06-16 at 3.23.45 AM.jpeg" alt="Digital Illustration" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800"> Fact About life</h3>
+                        <p class="text-gray-600 mt-2">Bold and colorful artwork for a marketing campaign.</p>
+                    </div>
+                </div>
+                <!-- Work Item 3 -->
+                <div class="portfolio-card bg-gray-100 rounded-xl shadow-lg overflow-hidden">
+                    <img src="WhatsApp Image 2025-06-16 at 3.23.43 AM.jpeg" alt="Typography Poster" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800">Name with your pics</h3>
+                        <p class="text-gray-600 mt-2">Minimalist poster design with striking typography.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reach Out Section -->
+    <section id="reach-out" class="py-20 bg-teal-50">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Reach Out</h2>
+            <div class="max-w-md mx-auto bg-white p-10 rounded-xl shadow-lg">
+                <div id="reachOutForm">
+                    <div class="mb-6">
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                        <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                        <input type="tel" id="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                        <textarea id="message" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" rows="4" placeholder="Tell us about your project"></textarea>
+                    </div>
+                    <button onclick="submitReachOut()" class="w-full bg-teal-600 text-white p-3 rounded-lg font-medium hover:bg-teal-700">Submit</button>
+                </div>
+                <div id="successMessage" class="hidden text-teal-600 text-center font-medium mt-4">
+                    Message sent successfully! We'll reach out soon.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-teal-600 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">© 2025 Creative Designs. Crafted with passion.</p>
+        </div>
+    </footer>
+
+    <script>
+        function submitReachOut() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && phone) {
+                document.getElementById('reachOutForm').classList.add('hidden');
+                document.getElementById('successMessage').classList.remove('hidden');
+
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('phone').value = '';
+                document.getElementById('message').value = '';
+
+                setTimeout(() => {
+                    document.getElementById('reachOutForm').classList.remove('hidden');
+                    document.getElementById('successMessage').classList.add('hidden');
+                }, 3000);
+            } else {
+                alert('Please complete all required fields.');
+            }
+        }
+    </script>
